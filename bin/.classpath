@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="src/" kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/cglib-2.2.2.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/javassist-3.9.0.GA.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/mybatis-3.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/mysql-connector-java-5.1.5.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/slf4j-api-1.7.9.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/slf4j-log4j12-1.7.5.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/log4j-api-2.11.1.jar"/>
+	<classpathentry kind="lib" path="D:/esendev/alljar/log4j-core-2.11.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

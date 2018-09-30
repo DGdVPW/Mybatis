@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间需要和IFruit的路径对应，IFruit中的方法名跟下边的操作中的id属性对应，否则会出错 -->  
+<mapper namespace="com.mybatis.dao.fruit.IFruit">  
+<!-- parameterType是需要穿进去的参数的类型，resultType是返回的参数类型，此处Fruit即是上午学生类的别名，如果没有别名的话就需要写全限定类名 -->  
+    <!-- 当实体对象属性名与数据库字段名不一致时，使用resultMap确定对应关系 -->
+    <resultMap id="fruitResultMap" type="Fruit">
+  		<id property="id" column="id" />
+  		<result property="name" column="name"/>
+  		<result property="price" column="price"/>
+  		<result property="source" column="source"/>
+  		<result property="numbers" column="numbers"/>
+  		<result property="image" column="image"/>
+	</resultMap>
+    
+    <select id="findFruitById" parameterType="String" resultMap="fruitResultMap">  
+        select * from fruit where id = #{id}  
+    </select>  
+      
+    <insert id="addFruit" parameterType="Fruit" useGeneratedKeys="true" keyProperty="id">  
+        insert into fruit(id,name, price, source, numbers,image) values(#{id},#{name}, #{price}, #{source}, #{numbers},#{image})  
+    </insert>  
+      
+    <update id="updateFruit" parameterType="Fruit">  
+        update fruit set name = #{name},price = #{price}, source = #{source}, numbers = #{numbers}, image = #{image} where id = #{id}  
+    </update>  
+      
+    <delete id="deleteFruit" parameterType="String">  
+        delete from fruit where id = #{id}  
+    </delete>  
+</mapper>  
